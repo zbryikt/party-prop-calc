@@ -11,9 +11,7 @@ calc = (parties) ->
     else Math.round((it.rate / sum2) * 10000) / 10000
     it.seat = Math.floor(it.rate2 * seat) or 0
     it.remain = (it.rate2 * seat) - it.seat
-    #if it.rate2 => console.log it.name, it.rate2, (it.rate2 * seat), it.remain
     consume += it.seat
-  #console.log "consume:" ,consume
 
   while consume < seat =>
     parties.sort ((a,b) -> b.remain - a.remain)

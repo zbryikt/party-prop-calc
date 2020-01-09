@@ -120,6 +120,22 @@ html
       ul
         li 只要綠一黨 1% 的分配，就可以讓綠二黨的 4% 被看見，這比起讓綠二黨的 4% 全部改投綠一黨還要容易。
         li 若要求集中選票至綠一黨，綠二黨就沒機會通過門檻，而留下的鐵粉票也就被門檻給忽略了。
+
+      p 以下提供幾種可能的情境，你可以自己比較看看這些情境對泛綠陣營不分區立委席次的影響。
+      .row
+        .col-md: .card: .card-body
+          h4 呼籲集中選票
+          p.text-sm 即便每個小黨各有 20% 的人改投大黨，綠一黨比例也僅成長約 1% ，對選情無顯著影響。
+          .btn.btn-outline-primary(ld="use-preset",data-name="appeal-focus") 呼籲集中試試看
+        .col-md: .card: .card-body
+          h4 支持明星小黨
+          p.text-sm 大黨有 6% 的票流向各小黨時，能協助綠二黨突破門檻。分配比例則依原本各黨支持度估算。
+          .btn.btn-outline-primary(ld="use-preset",data-name="appeal-distribute") 現在就支持
+        .col-md: .card: .card-body
+          h4 什麼都不做
+          p.text-sm 維持原樣，未過門檻的政黨票就這樣直接放給他消失。
+          .btn.btn-outline-primary(ld="use-preset",data-name="original") 現在就佛系
+
       .py-4.my-4: hr
       h2 結論
       p 政黨票因為門檻的關係，有些票會被忽略而無法反映在不分區立委的席次上，然而對成長中的小黨來說，一定會有從 0 到 5% 之間的過渡期。較好的模式或許是將選票分給已有人氣的小型政黨，支持他們越過政黨票門檻，但無論怎麼投，相同陣營最重要的還是團結；相對的，若你想要打擊對手，就想辦法分化他們吧。
@@ -157,13 +173,35 @@ html
       ]
       sum = parties.reduce(((a,b) -> a + b.rate),0)
       preset = do
-        original: {"綠一黨": 30, "綠二黨": 4, "綠三黨": 2, "綠四黨": 0.1, "綠五黨": 0.1}
-        centralize: {"綠一黨": 36.2, "綠二黨": 0, "綠三黨": 0, "綠四黨": 0.0, "綠五黨": 0.0}
-        "extreme-distribute": {"綠一黨": 16.2, "綠二黨": 5, "綠三黨": 5, "綠四黨": 5.0, "綠五黨": 5.0}
+        original: {"綠一黨": 29, "綠二黨": 4, "綠三黨": 2, "綠四黨": 0.1, "綠五黨": 0.1}
+        centralize: {"綠一黨": 35.2, "綠二黨": 0, "綠三黨": 0, "綠四黨": 0.0, "綠五黨": 0.0}
+        "extreme-distribute": {"綠一黨": 15.2, "綠二黨": 5, "綠三黨": 5, "綠四黨": 5.0, "綠五黨": 5.0}
         "extreme-lose": {"綠一黨": 16.6, "綠二黨": 4.9, "綠三黨": 4.9, "綠四黨": 4.9, "綠五黨": 4.9}
-        "distribute": {"綠一黨": 26, "綠二黨": 5, "綠三黨": 5, "綠四黨": 0.1, "綠五黨": 0.1}
+        "distribute": {"綠一黨": 25, "綠二黨": 5, "綠三黨": 5, "綠四黨": 0.1, "綠五黨": 0.1}
+
+      rate = 0.2
+      count = preset.original["綠一黨"] * rate
+      sum2 = [v for k,v of preset.original].reduce(((a,b) -> a + b),0) - preset.original["綠一黨"]
+      preset["appeal-focus"] = do
+        "綠一黨": Math.round(100 * (preset.original["綠一黨"] + <[二 三 四 五]>.map(->
+          preset.original["綠#{it}黨"] * rate).reduce(((a,b) -> a + b),0))) / 100
+        "綠二黨": Math.round(100 * preset.original["綠二黨"] * ( 1 - rate)) / 100
+        "綠三黨": Math.round(100 * preset.original["綠三黨"] * ( 1 - rate)) / 100
+        "綠四黨": Math.round(100 * preset.original["綠四黨"] * ( 1 - rate)) / 100
+        "綠五黨": Math.round(100 * preset.original["綠五黨"] * ( 1 - rate)) / 100
+
+      rate = 0.06
+      count = preset.original["綠一黨"] * rate
+      sum2 = [v for k,v of preset.original].reduce(((a,b) -> a + b),0) - preset.original["綠一黨"]
+      preset["appeal-distribute"] = do
+        "綠一黨": preset.original["綠一黨"] - count
+        "綠二黨": Math.round(100 * preset.original["綠二黨"] * ( 1 + count / sum2 )) / 100
+        "綠三黨": Math.round(100 * preset.original["綠三黨"] * ( 1 + count / sum2 )) / 100
+        "綠四黨": Math.round(100 * preset.original["綠四黨"] * ( 1 + count / sum2 )) / 100
+        "綠五黨": Math.round(100 * preset.original["綠五黨"] * ( 1 + count / sum2 )) / 100
 
       apply = (name) -> for k,v of preset[name] => parties.filter(-> it.name == k).map(->it.rate = v)
+      apply \original
       calc parties
 
 
@@ -171,7 +209,8 @@ html
         root: document.body
         handler: do
           party: do
-            list: -> parties
+            list: ->
+              <[藍一黨 綠一黨 綠二黨 綠三黨 綠四黨 綠五黨]>.map (d) -> parties.filter(->it.name == d).0
             handle: ({node, data}) ->
               name = ld$.find node, '.name', 0
               dot = ld$.find node, '.dot', 0
