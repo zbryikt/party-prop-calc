@@ -1,0 +1,265 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>小黨與政黨票門檻分析 - 以泛綠陣營為例</title><meta property="og:url" content="https://zbryikt.github.io/party-prop-calc/"><meta property="og:title" content="小黨與政黨票門檻分析 - 以泛綠陣營為例"><meta property="og:description" content="人氣小黨如綠黨無論在哪家民調中有一定比例的支持度，如果我們將泛綠的政黨票分一部份給他們，會有什麼樣的結果呢？"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://zbryikt.github.io/party-prop-calc/assets/img/thumbnail.jpg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:type" content="website"><link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="assets/lib/ldui/ldui.min.css"><style>.parties {
+  min-height: 130px;
+}
+.party {
+  flex: 1 0 auto;
+  transition: width 1s ease-in-out;
+}
+.party .bar {
+  background: #ddd;
+  width: 100%;
+  height: 50px;
+}
+.party .ly {
+  padding: 0.5em;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.party .seat {
+  width: 1.4em;
+  height: 1.4em;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 0.2em 0.2em 0;
+  display: inline-block;
+  background-image: url("/assets/img/user.svg");
+  background-size: cover;
+  background-position: center center;
+  transition: width 1s ease-in-out, margin 1s ease-in-out;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+.label {
+  display: flex;
+  align-items: center;
+  margin-right: 1.25em;
+  white-space: pre-wrap;
+}
+.label .dot {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin-right: 0.25em;
+}
+.label > * {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .parties {
+    min-height: 100px;
+  }
+  .party .seat {
+    width: 0.9em;
+    height: 0.9em;
+  }
+}
+</style></head><body class="p-4"><div class="w-1024 rwd mx-auto typeset heading-contrast"><h2>小黨與政黨票門檻分析</h2><div class="d-flex text-muted align-items-center"><div class="flex-grow-1">以泛綠陣營 ( 民進黨、綠黨、台灣基進、一邊一國、喜樂島 ) 為例</div><div>zbryikt</div></div><div class="sticky py-4" style="background:#fff;top:0px"><div class="legend"><div class="label" ld-each="party"><div class="dot"></div><div class="name"></div></div></div><div class="d-flex parties"><div class="party" ld="bar" data-name="中國國民黨"><div class="bar"></div><div class="ly"></div></div><div class="party" ld="bar" data-name="民主進步黨"><div class="bar"></div><div class="ly"></div></div><div class="party" ld="bar" data-name="台灣基進"><div class="bar"></div><div class="ly"></div></div><div class="party" ld="bar" data-name="綠黨"><div class="bar"></div><div class="ly"></div></div><div class="party" ld="bar" data-name="一邊一國行動黨"><div class="bar"></div><div class="ly"></div></div><div class="party" ld="bar" data-name="喜樂島聯盟"><div class="bar"></div><div class="ly"></div></div></div><div class="pb-3 pt-2 text-center"><p>泛綠共 <span class="font-weight-bold text-danger" ld="party-count">5</span> 個政黨達政黨票門檻，共獲得 <span class="font-weight-bold text-danger" ld="seat-count">18</span> 席不分區立委席次。國民黨則獲得 <span class="font-weight-bold text-danger" ld="kmt-seat">0</span> 席。</p></div></div><p>2016 年起，中華民國依「<a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0020010&amp;flno=67" target="_blank">公職人員選舉罷免法 第 67 條</a>」之規定，採「名單比例代表制 ( List Proportional Representation )」 依各政黨得票率將不分區立委席次給各政黨所提名之不分區立委。</p><p>But! 依選罷法 67 條第 5 款所述，政黨得票率未達 5% 之政黨不予分配不分區立委席次。就算你獲得了 60 萬位選民的支持，佔了政黨票的 4.99% ，沒過門檻說不給就是不給。那麼問題來了，若你支持的是特定陣營，但你又想將票投給小黨，那會不會因為 5% 門檻的影響使得我方陣營的席次而減少呢？</p><p>以泛綠陣營為例，上圖呈現了一個<b>假想的政黨票比例分布</b>與其對應的不分區立委席次分配。在此例中，已有相當人數支持台灣基進與綠黨，兩者總和甚至超過 5% ，足夠再支持一個小黨越過門檻，可惜票源分散，使得兩黨皆無法獲得不分區席次。</p><h3>支持人氣小黨</h3><p>人氣小黨如綠黨無論在哪家民調中有一定比例的支持度，如果我們將泛綠的政黨票分一部份給他們，會有什麼樣的結果呢？</p><div class="pb-4"><div class="btn btn-outline-primary" ld="use-preset" data-name="distribute">跑跑看</div></div><p>由於小黨越過 5% 門檻，瞬間獲得了 6 個不分區立委席次。民進黨則因為票源分配減少兩席。總地來說，泛綠陣營的總席次由 21 席提升至 23 席，真是賺翻了！</p><h3>全面達標</h3><p>那麼，如果泛綠政黨皆能越過門檻，可以獲得更多的席次嗎？</p><div class="pb-4"><div class="btn btn-outline-primary" ld="use-preset" data-name="extreme-distribute">跑跑看</div></div><p>就結果來看，仍然獲得了 23 席立委，數量上並沒有提升。先前數量上的差異主要是來自於越過門檻後，原本被門檻忽略的支持者顯現了出來，因此泛綠陣營並不會因為原本支持率就低的政黨過關而增加更多的席次。</p><h3>火力集中</h3><p>如果我們將陣營所有票源集中至單一政黨，又會發生什麼事呢？</p><div class="pb-4"><div class="btn btn-outline-primary" ld="use-preset" data-name="centralize">跑跑看</div></div><p>由於所有的選票都不再受到門檻影響，因此反映出了與「支持人氣小黨」相同的席次。當然，權力集中在民主社會並不是好事，因此若兩者有相同的結果，也許將席次分布至小黨會是更好的選擇。</p><h3>通通殘念</h3><p>然而，社會並沒有我們想像的這麼團結，即便我們呼籲「支持小黨」或「選票集中」，仍然有些人有自己的想法；而當選票配置很不幸的落在小黨通通摃龜的情況下 ( 全都獲得 4.9% 的政黨票 ) ，那麼立委席次又會如何變化呢？</p><div class="pb-4"><div class="btn btn-outline-primary" ld="use-preset" data-name="extreme-lose">不敢看也要跑跑看</div></div><p>在這種情況下，泛綠陣營受到門檻影響最大，將近 19.96% 的選票被不分區分配給忽略。同樣的選票數，原本可以與國民黨拉至 12 席的差距，現在竟然以 17 比 17 打平了！</p><div class="pb-4"><div class="btn btn-outline-primary" ld="use-preset" data-name="original">再看一次最初的分配</div></div><div class="py-4 my-4"><hr></div><h2>結論</h2><p>政黨票因為門檻的關係，有些票會被忽略而無法反映在不分區立委的席次上，然而對成長中的小黨來說，一定會有從 0 到 5% 之間的過渡期。較好的模式或許是將選票分給已有人氣的小型政黨，支持他們越過政黨票門檻，但無論怎麼投，相同陣營最重要的還是團結；相對的，若你想要打擊對手，就想辦法分化他們吧。</p></div><script type="text/javascript" src="assets/lib/ldui/ldui.min.js"></script><script type="text/javascript" src="js/calc.js"></script><script>// Generated by LiveScript 1.3.1
+var colors, parties, sum, preset, apply, view;
+colors = {
+  "中國國民黨": '#45f',
+  "民主進步黨": '#9f9',
+  "台灣基進": '#7ea',
+  "綠黨": '#5db',
+  "一邊一國行動黨": '#3cc',
+  "喜樂島聯盟": '#1ae'
+};
+parties = [
+  {
+    name: "中國國民黨",
+    seat: 11,
+    rate: 19.6,
+    side: 'blue'
+  }, {
+    name: "民主進步黨",
+    seat: 18,
+    rate: 32,
+    side: 'green'
+  }, {
+    name: "台灣基進",
+    seat: 1,
+    rate: 3.9,
+    side: 'green'
+  }, {
+    name: "綠黨",
+    seat: 1,
+    rate: 2.4,
+    side: 'green'
+  }, {
+    name: "一邊一國行動黨",
+    seat: 0,
+    rate: 0.1,
+    side: 'green'
+  }, {
+    name: "喜樂島聯盟",
+    seat: 0,
+    rate: 0.1,
+    side: 'green'
+  }
+];
+sum = parties.reduce(function(a, b){
+  return a + b.rate;
+}, 0);
+preset = {
+  original: {
+    "民主進步黨": 32,
+    "台灣基進": 3.9,
+    "綠黨": 2.4,
+    "一邊一國行動黨": 0.1,
+    "喜樂島聯盟": 0.1
+  },
+  centralize: {
+    "民主進步黨": 38.5,
+    "台灣基進": 0,
+    "綠黨": 0,
+    "一邊一國行動黨": 0.0,
+    "喜樂島聯盟": 0.0
+  },
+  "extreme-distribute": {
+    "民主進步黨": 18.5,
+    "台灣基進": 5,
+    "綠黨": 5,
+    "一邊一國行動黨": 5.0,
+    "喜樂島聯盟": 5.0
+  },
+  "extreme-lose": {
+    "民主進步黨": 18.9,
+    "台灣基進": 4.9,
+    "綠黨": 4.9,
+    "一邊一國行動黨": 4.9,
+    "喜樂島聯盟": 4.9
+  },
+  "distribute": {
+    "民主進步黨": 28.3,
+    "台灣基進": 5,
+    "綠黨": 5,
+    "一邊一國行動黨": 0.1,
+    "喜樂島聯盟": 0.1
+  }
+};
+apply = function(name){
+  var k, ref$, v, results$ = [];
+  for (k in ref$ = preset[name]) {
+    v = ref$[k];
+    results$.push(parties.filter(fn$).map(fn1$));
+  }
+  return results$;
+  function fn$(it){
+    return it.name === k;
+  }
+  function fn1$(it){
+    return it.rate = v;
+  }
+};
+calc(parties);
+view = new ldView({
+  root: document.body,
+  handler: {
+    party: {
+      list: function(){
+        return parties;
+      },
+      handle: function(arg$){
+        var node, data, name, dot;
+        node = arg$.node, data = arg$.data;
+        name = ld$.find(node, '.name', 0);
+        dot = ld$.find(node, '.dot', 0);
+        name.innerHTML = data.name + "<span class='text-sm'>(" + data.rate + "%)</span>";
+        return dot.style.background = colors[data.name];
+      }
+    },
+    bar: function(arg$){
+      var node, name, bar, ly, party, seats, len;
+      node = arg$.node;
+      name = node.getAttribute('data-name');
+      bar = ld$.find(node, '.bar', 0);
+      ly = ld$.find(node, '.ly', 0);
+      party = parties.filter(function(it){
+        return it.name === name;
+      })[0];
+      node.style.width = 100 * (party.rate / sum) + "%";
+      bar.style.background = colors[name];
+      seats = ld$.find(ly, '.seat');
+      len = seats.length;
+      (function(){
+        var i$, results$ = [];
+        for (i$ = len - party.seat - 1; i$ >= 0; --i$) {
+          results$.push(i$);
+        }
+        return results$;
+      }()).map(function(d, i){
+        var _;
+        _ = function(n){
+          n.classList.remove('ld-float-btt-in');
+          n.classList.add('ld-float-btt-out');
+          n.style.width = "0em";
+          n.style.margin = "0em";
+          return debounce(1000).then(function(){
+            return n.parentNode.removeChild(n);
+          });
+        };
+        return _(seats[d]);
+      });
+      return (function(){
+        var i$, to$, results$ = [];
+        for (i$ = 0, to$ = party.seat - len; i$ < to$; ++i$) {
+          results$.push(i$);
+        }
+        return results$;
+      }()).map(function(d, i){
+        var node;
+        node = ld$.create({
+          name: 'div',
+          className: ['seat', 'ld', 'ld-float-btt-in'],
+          style: {
+            backgroundColor: colors[name],
+            animationDelay: (i / 50 + Math.random() * 0.1) + "s"
+          }
+        });
+        ly.appendChild(node);
+        return "<div class='seat ld ld-float-btt-in'\nstyle='background-color:" + colors[name] + ";animation-delay:" + (i / 50 + Math.random() * 0.1) + "s'>\n</div>";
+      }).join('');
+    },
+    "party-count": function(arg$){
+      var node;
+      node = arg$.node;
+      return node.innerText = parties.filter(function(it){
+        return it.side === 'green' && it.rate >= 5;
+      }).length;
+    },
+    "seat-count": function(arg$){
+      var node;
+      node = arg$.node;
+      return node.innerText = parties.filter(function(it){
+        return it.side === 'green';
+      }).reduce(function(a, b){
+        return a + b.seat;
+      }, 0);
+    },
+    "kmt-seat": function(arg$){
+      var node;
+      node = arg$.node;
+      return node.innerText = parties.filter(function(it){
+        return it.side === 'blue';
+      }).reduce(function(a, b){
+        return a + b.seat;
+      }, 0);
+    }
+  },
+  action: {
+    click: {
+      "use-preset": function(arg$){
+        var node, name;
+        node = arg$.node;
+        name = node.getAttribute('data-name');
+        apply(name);
+        calc(parties);
+        return view.render();
+      }
+    }
+  }
+});</script></body></html>

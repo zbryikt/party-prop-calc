@@ -1,0 +1,23 @@
+party = [
+  {name: "民主進步黨", color: "#2f5"},
+  {name: "中國國民黨", color: "#25f"},
+  {name: "民眾黨", color: "#edd"},
+  {name: "時代力量", color: "#ff0"},
+  {name: "親民黨", color: "#f92"},
+  {name: "台灣基進", color: "#090"},
+  {name: "綠黨", color: "#0b9"},
+  {name: "新黨", color: "#db0"},
+]
+-
+  data = [
+    {name: "民主進步黨", rate: 30.4, color: "#2f5"},
+    {name: "中國國民黨", rate: 24.8, color: "#25f"},
+    {name: "民眾黨", rate: 11.4, color: "#edd"},
+    {name: "時代力量", rate: 7.6, color: "#ff0"},
+    {name: "親民黨", rate: 3.0, color: "#f92"},
+    {name: "台灣基進", rate: 1.0, color: "#090"},
+    {name: "綠黨", rate: 1.9, color: "#0b9"},
+    {name: "新黨", rate: 1.0, color: "#db0"},
+  ]
+  data.sort(function(a,b) { return b.rate - a.rate});
+
