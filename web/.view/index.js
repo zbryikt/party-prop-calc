@@ -889,7 +889,7 @@ pug_html = pug_html + "通通殘念\u003C\u002Fh3\u003E";
 ;pug_debug_line = 115;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 115;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "然而，社會並沒有我們想像的這麼團結，即便我們呼籲「支持小黨」或「選票集中」，仍然有些人有自己的想法；而當選票配置很不幸的落在小黨通通摃龜的情況下 ( 全都獲得 4.9% 的政黨票 ) ，那麼立委席次又會如何變化呢？\u003C\u002Fp\u003E";
+pug_html = pug_html + "然而，社會並沒有我們想像的這麼團結，即便我們呼籲「支持小黨」或「選票集中」，仍有些人會有自己的想法；而當選票配置很不幸的落在小黨通通摃龜的情況下 ( 全都獲得 4.9% 的政黨票 ) ，立委席次又會如何變化呢？\u003C\u002Fp\u003E";
 ;pug_debug_line = 116;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv class=\"pb-4\"\u003E";
 ;pug_debug_line = 116;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
@@ -899,7 +899,7 @@ pug_html = pug_html + "不敢看也要跑跑看\u003C\u002Fdiv\u003E\u003C\u002F
 ;pug_debug_line = 117;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 117;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "在這種情況下，泛綠陣營受到門檻影響最大，將近 19.6% 的選票被不分區分配給忽略。同樣的選票數，原本可以與國民黨拉至 12 席的差距，現在竟然以 17 比 17 打平了！\u003C\u002Fp\u003E";
+pug_html = pug_html + "在這種情況下，泛綠陣營受到門檻影響最大，將近 19.6% 的選票被不分區分配忽略了。同樣的選票數，原本可以與國民黨拉至 12 席的差距，現在竟然以 17 比 17 打平了！\u003C\u002Fp\u003E";
 ;pug_debug_line = 118;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv class=\"pb-4\"\u003E";
 ;pug_debug_line = 118;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
