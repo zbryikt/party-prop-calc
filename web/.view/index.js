@@ -632,7 +632,7 @@ var og = {
   url: "https://zbryikt.github.io/party-prop-calc/",
   title: "小黨與政黨票門檻分析 - 以泛綠陣營為例",
   description: "人氣小黨如綠三黨有一定比例的支持度，如果我們將泛綠的政黨票分一部份給他們，會如何影響不分區立委的結果呢？",
-  thumbnail: "https://zbryikt.github.io/party-prop-calc/assets/img/thumbnail.jpg"
+  thumbnail: "https://zbryikt.github.io/party-prop-calc/assets/img/thumbnail.png"
 }
 ;pug_debug_line = 11;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Chead\u003E";
