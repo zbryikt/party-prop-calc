@@ -823,7 +823,7 @@ pug_html = pug_html + "\u003Cb\u003E";
 ;pug_debug_line = 100;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "假想的政黨票比例分布\u003C\u002Fb\u003E";
 ;pug_debug_line = 100;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "與其對應的不分區立委席次分配。在此例中，已有相當人數支持台灣基進與綠黨，兩者總和甚至超過 5% ，足夠再支持一個小黨越過門檻，可惜票源分散，使得兩黨皆無法獲得不分區席次。\u003C\u002Fp\u003E";
+pug_html = pug_html + "與其對應的不分區立委席次分配。在此例中，已有相當人數支持台灣基進與綠黨，兩者總和甚至超過 5% ，足夠支持一個小黨越過門檻，可惜票源分散，使得兩黨皆無法獲得不分區席次。\u003C\u002Fp\u003E";
 ;pug_debug_line = 101;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp class=\"text-muted\"\u003E";
 ;pug_debug_line = 101;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
