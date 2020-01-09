@@ -813,7 +813,7 @@ pug_html = pug_html + "」之規定，採「名單比例代表制 ( List Proport
 ;pug_debug_line = 99;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 99;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "But! 依選罷法 67 條第 5 款所述，政黨得票率未達 5% 之政黨不予分配不分區立委席次。就算你獲得了 60 萬位選民的支持，佔了政黨票的 4.99% ，沒過門檻說不給就是不給。那麼問題來了，若你支持的是特定陣營，但你又想將票投給小黨，那會不會因為 5% 門檻的影響使得我方陣營的席次而減少呢？\u003C\u002Fp\u003E";
+pug_html = pug_html + "But! 依選罷法 67 條第 5 款所述，政黨得票率未達 5% 之政黨不予分配不分區立委席次。就算你獲得了 60 萬位選民的支持，佔了政黨票的 4.99% ，沒過門檻說不給就是不給。那麼問題來了，若你支持的是特定陣營，但你又想將票投給小黨，那會不會因為 5% 門檻的影響使得我方陣營的席次減少呢？\u003C\u002Fp\u003E";
 ;pug_debug_line = 100;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 100;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
