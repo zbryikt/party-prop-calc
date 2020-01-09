@@ -903,7 +903,7 @@ pug_html = pug_html + "不敢看也要跑跑看\u003C\u002Fdiv\u003E\u003C\u002F
 ;pug_debug_line = 118;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 118;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "在這種情況下，泛綠陣營受到門檻影響最大，將近 19.96% 的選票被不分區分配給忽略。同樣的選票數，原本可以與國民黨拉至 12 席的差距，現在竟然以 17 比 17 打平了！\u003C\u002Fp\u003E";
+pug_html = pug_html + "在這種情況下，泛綠陣營受到門檻影響最大，將近 19.6% 的選票被不分區分配給忽略。同樣的選票數，原本可以與國民黨拉至 12 席的差距，現在竟然以 17 比 17 打平了！\u003C\u002Fp\u003E";
 ;pug_debug_line = 119;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv class=\"pb-4\"\u003E";
 ;pug_debug_line = 119;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
