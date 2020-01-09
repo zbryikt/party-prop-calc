@@ -845,7 +845,7 @@ pug_html = pug_html + "跑跑看\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 105;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp\u003E";
 ;pug_debug_line = 105;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "由於小黨越過 5% 門檻，瞬間獲得了 6 個不分區立委席次。民進黨則因為票源分配減少兩席。總地來說，泛綠陣營的總席次由 21 席提升至 23 席，同時國民黨席次甚至減少 2 席，雙方差距拉大至 12 席，真是賺翻了！\u003C\u002Fp\u003E";
+pug_html = pug_html + "由於小黨越過 5% 門檻，瞬間獲得了 6 個不分區立委席次。民進黨則因為票源分配減少 4 席。總地來說，泛綠陣營的總席次由 21 席提升至 23 席，同時國民黨席次甚至減少 2 席，雙方差距拉大至 12 席，真是賺翻了！\u003C\u002Fp\u003E";
 ;pug_debug_line = 106;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Ch3\u003E";
 ;pug_debug_line = 106;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
