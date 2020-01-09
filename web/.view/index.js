@@ -827,7 +827,7 @@ pug_html = pug_html + " ( 數據為隨意生成 )，與其對應的不分區立�
 ;pug_debug_line = 101;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cp class=\"text-muted\"\u003E";
 ;pug_debug_line = 101;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "( 為求簡化說明及避免主觀立場 \u002F 分類，此處僅分兩陣營並且主要以討論泛綠陣營來說明 )\u003C\u002Fp\u003E";
+pug_html = pug_html + "( 為求簡化說明及避免主觀立場 \u002F 分類，此處僅分兩陣營，使用代稱並主要以討論泛綠陣營來說明 )\u003C\u002Fp\u003E";
 ;pug_debug_line = 102;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Ch3\u003E";
 ;pug_debug_line = 102;pug_debug_filename = "src\u002Fpug\u002Findex.pug";

@@ -1,29 +1,5 @@
 seat = 34
 
-parties = [
- * name: '民主進步黨', rate: 44.06, side: \green
- * name: '台灣基進', rate: 0.0, side: \green
- * name: '綠黨', rate: 4.5, side: \green
- * name: '一邊一國行動黨', rate: 0, side: \green
- * name: '喜樂島聯盟', rate: 0, side: \green
-
- * name: '中國國民黨', rate: 26.91, side: \none
- * name: '時代力量', rate: 6.1, side: \none
- * name: '台灣民眾黨', rate: 0.0, side: \none
-
- * name: '親民黨', rate: 6.52, side: \none
- * name: '台灣團結聯盟', rate: 0.5, side: \none
- * name: '新黨', rate: 4.1843, side: \none
- * name: '中華統一促進黨', rate: 0, side: \none
- * name: '國會政黨聯盟', rate: 0, side: \none
- * name: '宗教聯盟', rate: 0, side: \none
- * name: '勞動黨', rate: 0, side: \none
- * name: '台灣維新', rate: 0, side: \none
- * name: '台彭黨', rate: 0, side: \none
- * name: '合一行動聯盟', rate: 0, side: \none
- * name: '安定力量', rate: 0, side: \none
-]
-
 calc = ->
   consume = 0
   sum = parties.reduce(((a,b) -> a + b.rate), 0)
