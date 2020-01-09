@@ -685,7 +685,7 @@ pug_html = pug_html + "\u003Cdiv class=\"d-flex text-muted align-items-center\"\
 ;pug_debug_line = 84;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv class=\"flex-grow-1\"\u003E";
 ;pug_debug_line = 84;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "以泛綠陣營 (民進黨、綠黨、台灣基進、一邊一國、喜樂島) 為例\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "透過假想數據，以泛綠陣營 (民進黨、綠黨、台灣基進、一邊一國、喜樂島) 為例\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 ;pug_debug_line = 85;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cdiv class=\"sticky py-4\" style=\"background:#fff;top:0px\"\u003E";
 ;pug_debug_line = 86;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
