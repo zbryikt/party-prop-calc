@@ -81,8 +81,7 @@ html
     .w-1024.rwd.mx-auto.typeset.heading-contrast
       h2 小黨與政黨票門檻分析
       .d-flex.text-muted.align-items-center
-        .flex-grow-1 以泛綠陣營 ( 民進黨、綠黨、台灣基進、一邊一國、喜樂島 ) 為例
-        div zbryikt
+        .flex-grow-1 以泛綠陣營 (民進黨、綠黨、台灣基進、一邊一國、喜樂島) 為例
       .sticky.py-4(style="background:#fff;top:0px")
         .legend
           .label(ld-each="party") #[.dot]#[.name]
@@ -134,6 +133,14 @@ html
         "綠黨": \#5db
         "一邊一國行動黨": \#3cc
         "喜樂島聯盟": \#1ae
+      short = do
+        "中國國民黨": "國民黨"
+        "民主進步黨": "民進黨"
+        "台灣基進": "台灣基進"
+        "綠黨": "綠黨"
+        "一邊一國行動黨": "一邊一國"
+        "喜樂島聯盟": "喜樂島"
+
       parties = [
         {name: "中國國民黨", seat: 11, rate: 19.6, side: \blue},
         {name: "民主進步黨", seat: 18, rate: 32, side: \green},
@@ -162,7 +169,9 @@ html
             handle: ({node, data}) ->
               name = ld$.find node, '.name', 0
               dot = ld$.find node, '.dot', 0
-              name.innerHTML = "#{data.name}<span class='text-sm'>(#{data.rate}%)</span>"
+              n = data.name
+              if window.innerWidth < 768 => n = short[data.name]
+              name.innerHTML = "#{n}<span class='text-sm'>(#{data.rate}%)</span>"
               dot.style.background = colors[data.name]
           bar: ({node}) ->
             name = node.getAttribute(\data-name)
