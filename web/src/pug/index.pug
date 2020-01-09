@@ -21,7 +21,7 @@ html
     meta(property="og:image:width",content=og.thumbwidth || "1200")
     meta(property="og:image:height",content=og.thumbheight || "630")
     meta(property="og:type", content="website")
-    link(rel="icon",href="favicon.ico")
+    link(rel="icon",href="assets/img/g0v.png")
 
     +css("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
     +css("assets/lib/ldui/ldui.min.css")
@@ -99,10 +99,11 @@ html
       p 2016 年起，中華民國依「#[a(href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0020010&flno=67",target="_blank") 公職人員選舉罷免法 第 67 條]」之規定，採「名單比例代表制 ( List Proportional Representation )」 依各政黨得票率將不分區立委席次給各政黨所提名之不分區立委。
       p But! 依選罷法 67 條第 5 款所述，政黨得票率未達 5% 之政黨不予分配不分區立委席次。就算你獲得了 60 萬位選民的支持，佔了政黨票的 4.99% ，沒過門檻說不給就是不給。那麼問題來了，若你支持的是特定陣營，但你又想將票投給小黨，那會不會因為 5% 門檻的影響使得我方陣營的席次而減少呢？
       p 以泛綠陣營為例，上圖呈現了一個#[b 假想的政黨票比例分布]與其對應的不分區立委席次分配。在此例中，已有相當人數支持台灣基進與綠黨，兩者總和甚至超過 5% ，足夠再支持一個小黨越過門檻，可惜票源分散，使得兩黨皆無法獲得不分區席次。
+      p.text-muted ( 為求簡化說明，此處並不包含時力、親民、台民黨等其它政黨，僅以中國國民黨與泛綠陣營來說明 )
       h3 支持人氣小黨
       p 人氣小黨如綠黨無論在哪家民調中有一定比例的支持度，如果我們將泛綠的政黨票分一部份給他們，會有什麼樣的結果呢？
       .pb-4: .btn.btn-outline-primary(ld="use-preset",data-name="distribute") 跑跑看
-      p 由於小黨越過 5% 門檻，瞬間獲得了 6 個不分區立委席次。民進黨則因為票源分配減少兩席。總地來說，泛綠陣營的總席次由 21 席提升至 23 席，真是賺翻了！
+      p 由於小黨越過 5% 門檻，瞬間獲得了 6 個不分區立委席次。民進黨則因為票源分配減少兩席。總地來說，泛綠陣營的總席次由 21 席提升至 23 席，同時國民黨席次甚至減少 2 席，雙方差距拉大至 12 席，真是賺翻了！
       h3 全面達標
       p 那麼，如果泛綠政黨皆能越過門檻，可以獲得更多的席次嗎？
       .pb-4: .btn.btn-outline-primary(ld="use-preset",data-name="extreme-distribute") 跑跑看
@@ -119,6 +120,8 @@ html
       .py-4.my-4: hr
       h2 結論
       p 政黨票因為門檻的關係，有些票會被忽略而無法反映在不分區立委的席次上，然而對成長中的小黨來說，一定會有從 0 到 5% 之間的過渡期。較好的模式或許是將選票分給已有人氣的小型政黨，支持他們越過政黨票門檻，但無論怎麼投，相同陣營最重要的還是團結；相對的，若你想要打擊對手，就想辦法分化他們吧。
+      p 這個政黨票門檻專案是一個小品的開源公民科技專案，源碼可於 #[a(href="https://github.com/zbryikt/party-prop-calc") 這裡] 取得。若有任何錯誤，可至 #[a(href="https://github.com/zbryikt/party-prop-calc/issues") issues] 頁面回報。
+      p 對選舉專案、互動視覺化或公民科技有興趣嗎？#[a(href="https://jothon.g0v.tw/") 來黑客松吧！]#[img(src="assets/img/g0v.svg")]
 
 
     +script("assets/lib/ldui/ldui.min.js")
