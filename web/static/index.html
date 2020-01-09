@@ -180,6 +180,7 @@ view = new ldView({
         if (window.innerWidth < 768) {
           n = short[data.name];
         }
+        console.log('md');
         name.innerHTML = n + "<span class='text-sm'>(" + data.rate + "%)</span>";
         return dot.style.background = colors[data.name];
       }

@@ -171,6 +171,7 @@ html
               dot = ld$.find node, '.dot', 0
               n = data.name
               if window.innerWidth < 768 => n = short[data.name]
+              console.log \md
               name.innerHTML = "#{n}<span class='text-sm'>(#{data.rate}%)</span>"
               dot.style.background = colors[data.name]
           bar: ({node}) ->
