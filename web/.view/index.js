@@ -646,8 +646,8 @@ pug_html = pug_html + "藍\u003C\u002Fspan\u003E";
 ;pug_debug_line = 8;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 var og = {
   url: "https://zbryikt.github.io/party-prop-calc/",
-  title: "小黨與政黨票門檻分析 - 以泛綠陣營為例",
-  description: "人氣小黨如綠三黨有一定比例的支持度，如果我們將泛綠的政黨票分一部份給他們，會如何影響不分區立委的結果呢？",
+  title: "小黨與政黨票門檻分析 - 以假想藍、綠陣營為例",
+  description: "人氣小黨有一定比例的支持度，如果我們將陣營中大黨的政黨票分一部份給他們，會如何影響不分區立委的結果呢？",
   thumbnail: "https://zbryikt.github.io/party-prop-calc/assets/img/thumbnail.png"
 }
 ;pug_debug_line = 15;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
