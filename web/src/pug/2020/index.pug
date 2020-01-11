@@ -1,0 +1,192 @@
+doctype html
+html
+  include /../../static/assets/lib/ldui/pug/ldui.pug
+  mixin g()
+    span(ld="g") 綠
+  mixin b()
+    span(ld="b") 藍
+  -
+    var og = {
+      url: "https://zbryikt.github.io/party-prop-calc/",
+      title: "小黨與政黨票門檻分析 - 以假想藍、綠陣營為例",
+      description: "人氣小黨有一定比例的支持度，如果我們將陣營中大黨的政黨票分一部份給他們，會如何影響不分區立委的結果呢？",
+      thumbnail: "https://zbryikt.github.io/party-prop-calc/assets/img/thumbnail.png"
+    }
+  head
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
+    title= og.title
+    meta(property="og:url", content=og.url)
+    meta(property="og:title", content=og.title)
+    meta(property="og:description", content=og.description)
+    meta(property="og:locale",content="zh_TW")
+    meta(property="og:image",content=og.thumbnail)
+    meta(property="og:image:type",content=og.thumbtype || "image/jpeg")
+    meta(property="og:image:width",content=og.thumbwidth || "1200")
+    meta(property="og:image:height",content=og.thumbheight || "630")
+    meta(property="og:type", content="website")
+    link(rel="icon",href="favicon.ico")
+
+    +css("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+    +css("../assets/lib/ldui/ldui.min.css")
+    style: :stylus
+      .parties
+        min-height: 130px
+      .party
+        flex: 1 0 auto
+        transition: width 1s ease-in-out
+        .bar
+          background: #ddd
+          width: 100%
+          height: 40px
+        .ly
+          padding: .5em
+          display: flex
+          display: flex
+          flex-wrap: wrap
+          justify-content: left
+        .seat
+          width: 1.4em
+          height: 1.4em
+          background: #ddd
+          border-radius: 50%
+          margin: 0 .2em .2em 0
+          display: inline-block
+          background-image: url(../assets/img/user.svg)
+          background-size: cover
+          background-position: center center
+          transition: width 1s ease-in-out, margin 1s ease-in-out
+
+      .legend
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: .5em
+      .label
+        display: flex
+        align-items: center
+        margin-right: 1.25em
+        white-space: pre-wrap
+      .label .dot
+        width: 1em
+        height: 1em
+        border-radius: 50%
+        margin-right: .25em
+      .label > *
+        display: inline-block
+
+      @media (max-width: 768px)
+        .parties
+          min-height: 100px
+        .party .seat
+          width: .9em
+          height: .9em
+
+  body.p-4
+    .w-1024.rwd.mx-auto.typeset.heading-contrast
+      div
+        h2#top 2020 政黨票開票結果
+        .sticky.py-4(style="background:#fff;top:0px")
+          .legend
+            .label(ld-each="party") #[.dot]#[.name]
+          .d-flex.parties
+            .party(ld-each="bar") #[.bar]#[.ly]
+          .pb-3.pt-2.text-center
+            p 泛#[+g]共 #[span.font-weight-bold.text-danger(ld="party-count") 5] 個政黨達門檻，並獲得 #[span.font-weight-bold.text-danger(ld="seat-count") 18] 席不分區立委席次。#[+b]一黨獲得 #[span.font-weight-bold.text-danger(ld="kmt-seat") 0] 席。
+
+
+    +script("../assets/lib/ldui/ldui.min.js")
+    +script("../js/calc.js")
+    script: :lsc
+
+      parties = [
+        {name: "藍一黨", seat: 11, rate: 20, side: \blue},
+        {name: "綠一黨", seat: 18, rate: 30, side: \green},
+        {name: "綠二黨", seat: 1, rate: 4, side: \green},
+        {name: "綠三黨", seat: 1, rate: 2, side: \green},
+        {name: "綠四黨", seat: 0, rate: 0.1, side: \green},
+        {name: "綠五黨", seat: 0, rate: 0.1, side: \green},
+      ]
+      parties = [{"name":"合一行動聯盟","count":13993,"rate":0.1284},{"name":"中華統一促進黨","count":26736,"rate":0.2454},{"name":"親民黨","count":389510,"rate":3.5748},{"name":"安定力量","count":70241,"rate":0.6447},{"name":"台灣基進","count":351732,"rate":3.2281},{"name":"時代力量","count":828958,"rate":7.6079},{"name":"新黨","count":106073,"rate":0.9735},{"name":"喜樂島聯盟","count":22996,"rate":0.2111},{"name":"中國國民黨","count":null,"rate":33.1769},{"name":"一邊一國行動黨","count":121308,"rate":1.1133},{"name":"勞動黨","count":15826,"rate":0.1452},{"name":"綠黨","count":249234,"rate":2.2874},{"name":"宗教聯盟","count":24598,"rate":0.2258},{"name":"民主進步黨","count":null,"rate":34.6755},{"name":"台灣民眾黨","count":null,"rate":10.9255},{"name":"台灣維新","count":9733,"rate":0.0893},{"name":"台澎黨","count":9776,"rate":0.0897},{"name":"國會政黨聯盟","count":30249,"rate":0.2776},{"name":"台灣團結聯盟","count":41386,"rate":0.3798}]
+
+      console.log parties.map -> it.name
+
+      meta = do
+        "中華統一促進黨": {side:  \red,   color: \#f00}
+        "新黨":           {side:  \red,   color: \#f20}
+
+        "親民黨":         {side:  \blue,  color: \#09f}
+        "合一行動聯盟":   {side:  \blue,  color: \#0bf}
+        "中國國民黨":     {side:  \blue,  color: \#00f}
+
+        "台灣基進":       {side:  \green, color: \#0f9}
+        "喜樂島聯盟":     {side:  \green, color: \#0f5}
+        "一邊一國行動黨": {side:  \green, color: \#0f4}
+        "綠黨":           {side:  \green, color: \#090}
+        "民主進步黨":     {side:  \green, color: \#0f0}
+        "台灣維新":       {side:  \green, color: \#0f2}
+        "台澎黨":         {side:  \green, color: \#0fb}
+        "台灣團結聯盟":   {side:  \green, color: \#942}
+
+        "安定力量":       {side:  \other, color: \#f09}
+        "時代力量":       {side:  \other, color: \#ff0}
+        "勞動黨":         {side:  \other, color: \#f0f}
+        "宗教聯盟":       {side:  \other, color: \#f0f}
+        "台灣民眾黨":     {side:  \other, color: \#0ff}
+        "國會政黨聯盟":   {side:  \other, color: \#999}
+
+
+
+      sum = parties.reduce(((a,b) -> a + b.rate),0)
+
+      calc parties
+      console.log parties
+      parties.sort (a,b) -> b.rate - a.rate
+
+
+      view = new ldView do
+        root: document.body
+        handler: do
+          party: do
+            list: -> parties
+            handle: ({node, data}) ->
+              name = ld$.find node, '.name', 0
+              dot = ld$.find node, '.dot', 0
+              n = data.name
+              name.innerHTML = "#{n}<span class='text-sm'>(#{data.rate}%)</span>"
+              dot.style.background = meta[data.name].color
+          bar:
+            list: -> parties
+            handle: ({node, data}) ->
+              name = data.name
+              bar = ld$.find node, '.bar', 0
+              ly = ld$.find node, '.ly', 0
+              party = parties.filter(->it.name == name).0
+              node.style.width = "#{100 * (party.rate / sum)}%"
+              bar.style.background = meta[name].color
+              seats = ld$.find(ly, '.seat')
+              len = seats.length
+              [len - party.seat - 1 to 0 by -1].map (d,i) ->
+                _ = (n) ->
+                  n.classList.remove \ld-float-btt-in
+                  n.classList.add \ld-float-btt-out
+                  n.style.width = "0em"
+                  n.style.margin = "0em"
+                  debounce 1000 .then -> n.parentNode.removeChild n
+                _ seats[d]
+              [0 til (party.seat - len)]
+                .map (d,i) ->
+                  node = ld$.create do
+                    name: \div
+                    className: <[seat ld ld-float-btt-in]>
+                    style: do
+                      backgroundColor: meta[name].color
+                      animationDelay: "#{i/50 + Math.random! * 0.1}s"
+                  ly.appendChild node
+
+                  """
+                  <div class='seat ld ld-float-btt-in'
+                  style='background-color:#{meta[name].color};animation-delay:#{i/50 + Math.random! * 0.1}s'>
+                  </div>
+                  """
+                .join('')
+              ld$.find(ly, '.seat').map -> it.style.backgroundColor = meta[name].color
